@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Cloud Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-headset"></i> Genesys Cloud</h1>
+            <div id="login-status">Not connected</div>
+        </header>
+
+        <div id="login-section" class="section">
+            <h2>Connect to Dashboard</h2>
+            <div class="form-group">
+                <label for="client-id">Client ID</label>
+                <input type="text" id="client-id" placeholder="Enter your Client ID">
+            </div>
+            <div class="form-group">
+                <label for="client-secret">Client Secret</label>
+                <input type="password" id="client-secret" placeholder="Enter your Client Secret">
+            </div>
+            <div class="form-group">
+                <label for="environment">Environment</label>
+                <select id="environment">
+                    <option value="mypurecloud.com">US East (mypurecloud.com)</option>
+                    <option value="usw2.pure.cloud">US West (usw2.pure.cloud)</option>
+                    <option value="cac1.pure.cloud">Canada (cac1.pure.cloud)</option>
+                    <option value="mypurecloud.ie">Ireland (mypurecloud.ie)</option>
+                    <option value="mypurecloud.de">Germany (mypurecloud.de)</option>
+                    <option value="mypurecloud.jp">Japan (mypurecloud.jp)</option>
+                </select>
+            </div>
+            <button id="connect-button"><i class="fas fa-plug"></i> Connect</button>
+        </div>
+
+        <div id="dashboard" class="section hidden">
+            <div class="card">
+                <h2><i class="fas fa-users"></i> Online Agents</h2>
+                <div id="agent-list" class="list-container">
+                    <p class="loading">Loading agents...</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-phone-alt"></i> Queue Status</h2>
+                <div id="queue-list" class="list-container">
+                    <p class="loading">Loading queues...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
