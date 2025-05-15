@@ -303,4 +303,195 @@ button:hover {
   #dashboard {
     grid-template-columns: 1fr;
   }
+}
+
+/* Error Message Styles */
+.error-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    animation: fade-in 0.3s ease-out;
+}
+
+.error-message h3 {
+    color: #e53e3e;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.error-message p {
+    margin-bottom: 15px;
+}
+
+.error-solutions {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.error-solutions h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.error-solutions ol {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.error-solutions li {
+    margin-bottom: 5px;
+}
+
+.error-message button {
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.error-message button:hover {
+    background-color: #2d3748;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Disable connection button on small screens */
+@media (max-width: 480px) {
+    #connect-button {
+        width: 100%;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+/* Notification Banner */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fefcbf;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ecc94b;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification p {
+    margin: 0;
+    color: #744210;
+    font-size: 0.9rem;
+}
+
+.notification a {
+    color: #744210;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.notification a:hover {
+    color: #975a16;
+}
+
+#dismiss-notification {
+    background: none;
+    border: none;
+    color: #744210;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+#dismiss-notification:hover {
+    color: #975a16;
+    background: none;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Adjust body padding when notification is present */
+body.has-notification {
+    padding-top: 4rem;
+}
+
+/* CORS Instructions Box */
+.cors-instructions {
+    background-color: #ebf8ff;
+    border-left: 4px solid #4299e1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.cors-instructions h3 {
+    color: #2b6cb0;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cors-instructions p {
+    margin-bottom: 12px;
+    color: #2c5282;
+}
+
+.cors-instructions ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.cors-instructions li {
+    margin-bottom: 8px;
+    color: #2c5282;
+}
+
+.cors-button {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.cors-button:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cors-button i {
+    margin-right: 5px;
 } 
